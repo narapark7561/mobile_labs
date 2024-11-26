@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import App from '../components/app';
+import App from '../App';
 export default function Page() {
   return (
     <View style={styles.container}>

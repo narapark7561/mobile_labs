@@ -1,16 +1,16 @@
 import React from 'react';
-import { ScrollView, Text, View, StyleSheet, Pressable } from 'react-native';
+import { ScrollView, Pressable, View, Text, StyleSheet } from 'react-native';
 
-export default function ToDoList({ tasks }) {
+function ToDoList({ tasks }) {
   return (
     <ScrollView>
-      {tasks.map((task, index) => (
-        <Pressable key={index}>
-          <View style={[styles.task]}>
-            <Text style={styles.taskText}>{task}</Text>
-          </View>
-        </Pressable>
-      ))}
+      <Pressable>
+        <View style={[styles.task]}>
+          {tasks.map((item, index) => (
+            <Text key={index}>{item}</Text>
+          ))}
+        </View>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -28,3 +28,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
+export default ToDoList;
